@@ -1,0 +1,9 @@
+{
+    "name": "Application",
+    "description": "A brief description of the application.",
+    "author": "Author Name",
+    "id": "exampleapp",
+    "category": "Utility",
+    "version": 1.0,
+    "specialTags": ["Official", "Featured"]
+}

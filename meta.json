@@ -1,0 +1,9 @@
+{
+  "name": "Nova OS Official Repository",
+  "maintainer": "NovaOS Maintainers",
+  "version": 0.4,
+  "contact": "repo@novafurry.win",
+  "categories": [],
+  "isTestBuild": false,
+  "url": "https://pkgs.os.novafurry.win"
+}
