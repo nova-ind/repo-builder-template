@@ -52,6 +52,7 @@ function imageToBase64Url(imagePath) {
   }
 console.log(readf("./meta.json"))
 var meta = JSON.parse(readf("./meta.json"))
+var allapps = []
 fs.rm(resolve("./_out/"), { recursive: true }, function () {
     mkdir("./_out/")
     if (!meta.isTestBuild) { meta.version = +(Number(meta.version) + 0.1).toFixed(1) }
@@ -93,6 +94,8 @@ fs.rm(resolve("./_out/"), { recursive: true }, function () {
                     console.log(meta)
                     logTime(`${file}`)
                     stats.processed.push(file)
+                    allapps.push(appmeta)
+
                 });
             } else {
                 stats.unprocessed.push(file)
@@ -104,6 +107,7 @@ fs.rm(resolve("./_out/"), { recursive: true }, function () {
             }
         });
         writef("./_out/meta.json", JSON.stringify(meta))
+        writef("./_out/allapps.json", JSON.stringify(allapps))
         writef("./_out/index.html", `
     <center>
     <h1>${meta.name}</h1>
